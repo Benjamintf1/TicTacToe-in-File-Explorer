@@ -69,7 +69,7 @@ for gamestate in range(19684): #create gamestate's
 	    PlayersTurn=6
 	else:
 	    PlayersTurn=5
-    elif (board[3] == board[5] == board[8] != 0):
+    elif (board[2] == board[5] == board[8] != 0):
 	if (numx == numo):
 	    PlayersTurn=6
 	else:
