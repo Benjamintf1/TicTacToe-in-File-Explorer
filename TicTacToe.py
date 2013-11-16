@@ -33,17 +33,16 @@ for gamestate in range(19684): #create gamestate's
     print("numun: " + str(numun))
     print(board)
 
-    if numx == numo:  
+    if numx == numo:  #Checks who's turn it is/for invalid states
         PlayersTurn = 1
     elif (numun == 9):
         PlayersTurn = 4
     elif numx  == (numo + 1):  
         PlayersTurn = 2
-	print("o's turn")
     else:
         PlayersTurn = 3
     
-    #Screw it, I'll do 7 checks by hand
+    #Screw it, I'll do 7 checks by hand checks for winning
     if (board[0] == board[1] == board[2] != 0):
 	if (numx == numo):
 	    PlayersTurn=6
@@ -86,7 +85,7 @@ for gamestate in range(19684): #create gamestate's
 	    PlayersTurn=5
     
     if PlayersTurn < 3:
-	    for makelinks in range(0,9):  #make the board
+	    for makelinks in range(0,9):  #make the board if not winner
 		filename = ""
 		if board[makelinks] == 0:
 		    
@@ -107,7 +106,7 @@ for gamestate in range(19684): #create gamestate's
 		    filename = str(makelinks) + "O"
 		    os.symlink("../Invalid_Move", filename)
     else:
-	if (PlayersTurn == 3):
+	if (PlayersTurn == 3):  #makes end game files and a link to initial state
 	    open("cheater", 'w').close()
 	    os.symlink("../0", "Play Again?")
 	elif (PlayersTurn == 4):
@@ -120,7 +119,7 @@ for gamestate in range(19684): #create gamestate's
 	    open("O wins!!", 'w').close()
 	    os.symlink("../0", "Play Again?")
         print("end of game")
-    os.chdir("..")
+    os.chdir("..") #gets ready for making next game state
             
         
     
