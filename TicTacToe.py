@@ -84,11 +84,7 @@ for gamestate in range(19684): #create gamestate's
 	    PlayersTurn=6
 	else:
 	    PlayersTurn=5
-    ##############################
-    #            TODO:           #
-    #  CHECK FOR GAME COMPLETION #
-    #  CHEATER NOTICE            #
-    ##############################
+    
     if PlayersTurn < 3:
 	    for makelinks in range(0,9):  #make the board
 		filename = ""
