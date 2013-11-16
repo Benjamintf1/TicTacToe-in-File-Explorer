@@ -1,5 +1,6 @@
 import os   #for making folders and links
 os.mkdir("Invalid_Move") #folder for invalid moves
+os.open("Invalid_Move/Invalid_Move", 'w').close()
 
 for x in range(0,(19684)):   #should be 3^9 possibilities 3, possibilities for 9 squares
     os.mkdir(str(x))         #Make directories for gamestate so they can be moved into and linked to
@@ -42,7 +43,7 @@ for gamestate in range(19684): #create gamestate's
     else:
         PlayersTurn = 3
     
-    #Screw it, I'll do 7 checks by hand checks for winning
+    #Screw it, I'll do 8 checks by hand checks for winning
     if (board[0] == board[1] == board[2] != 0):
 	if (numx == numo):
 	    PlayersTurn=6
@@ -108,16 +109,16 @@ for gamestate in range(19684): #create gamestate's
     else:
 	if (PlayersTurn == 3):  #makes end game files and a link to initial state
 	    open("cheater", 'w').close()
-	    os.symlink("../0", "Play Again?")
+	    os.symlink("../0", "Play_Again?")
 	elif (PlayersTurn == 4):
 	    open("cats game", 'w').close()
-	    os.symlink("../0", "Play Again?")
+	    os.symlink("../0", "Play_Again?")
 	elif (PlayersTurn == 5):
 	    open("X wins!!", 'w').close()
-	    os.symlink("../0", "Play Again?")
+	    os.symlink("../0", "Play_Again?")
 	elif (PlayersTurn == 6):
 	    open("O wins!!", 'w').close()
-	    os.symlink("../0", "Play Again?")
+	    os.symlink("../0", "Play_Again?")
         print("end of game")
     os.chdir("..") #gets ready for making next game state
             
