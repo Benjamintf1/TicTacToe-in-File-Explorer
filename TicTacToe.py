@@ -36,7 +36,7 @@ for gamestate in range(19684): #create gamestate's
 
     if numx == numo:  #Checks who's turn it is/for invalid states
         PlayersTurn = 1
-    elif (numun == 9):
+    elif (numun == 0):
         PlayersTurn = 4
     elif numx  == (numo + 1):  
         PlayersTurn = 2
