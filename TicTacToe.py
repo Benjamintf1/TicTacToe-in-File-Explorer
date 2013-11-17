@@ -2,6 +2,7 @@ import os   #for making folders and links
 os.mkdir("Invalid_Move") #folder for invalid moves
 open("Invalid_Move/Invalid_Move", 'w').close()
 
+os.mkdir("Moves")
 for x in range(0,(19684)):   #should be 3^9 possibilities 3, possibilities for 9 squares
     os.mkdir("Moves/" + str(x))         #Make directories for gamestate so they can be moved into and linked to
 os.symlink("Moves/0", "START")      #link's to first state
