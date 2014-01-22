@@ -46,46 +46,47 @@ for gamestate in range(19684): #create gamestate's
         PlayersTurn = 3
     
     #Screw it, I'll do 8 checks by hand checks for winning
-    if (board[0] == board[1] == board[2] != 0):
-	if (numx == numo):
-	    PlayersTurn=6
-	else:
-	    PlayersTurn=5
-    elif (board[3] == board[4] == board[5] != 0):
-	if (numx == numo):
-	    PlayersTurn=6
-	else:
-	    PlayersTurn=5
-    elif (board[6] == board[7] == board[8] != 0):
-	if (numx == numo):
-	    PlayersTurn=6
-	else:
-	    PlayersTurn=5
-    elif (board[0] == board[3] == board[6] != 0):
-	if (numx == numo):
-	    PlayersTurn=6
-	else:
-	    PlayersTurn=5
-    elif (board[1] == board[4] == board[7] != 0):
-	if (numx == numo):
-	    PlayersTurn=6
-	else:
-	    PlayersTurn=5
-    elif (board[2] == board[5] == board[8] != 0):
-	if (numx == numo):
-	    PlayersTurn=6
-	else:
-	    PlayersTurn=5
-    elif (board[0] == board[4] == board[8] != 0):
-	if (numx == numo):
-	    PlayersTurn=6
-	else:
-	    PlayersTurn=5
-    elif (board[2] == board[4] == board[6] != 0):
-	if (numx == numo):
-	    PlayersTurn=6
-	else:
-	    PlayersTurn=5
+    if (PlayersTurn != 3):    
+	    if (board[0] == board[1] == board[2] != 0):
+		if (numx == numo):
+		    PlayersTurn=6
+		else:
+		    PlayersTurn=5
+	    elif (board[3] == board[4] == board[5] != 0):
+		if (numx == numo):
+		    PlayersTurn=6
+		else:
+		    PlayersTurn=5
+	    elif (board[6] == board[7] == board[8] != 0):
+		if (numx == numo):
+		    PlayersTurn=6
+		else:
+		    PlayersTurn=5
+	    elif (board[0] == board[3] == board[6] != 0):
+		if (numx == numo):
+		    PlayersTurn=6
+		else:
+		    PlayersTurn=5
+	    elif (board[1] == board[4] == board[7] != 0):
+		if (numx == numo):
+		    PlayersTurn=6
+		else:
+		    PlayersTurn=5
+	    elif (board[2] == board[5] == board[8] != 0):
+		if (numx == numo):
+		    PlayersTurn=6
+		else:
+		    PlayersTurn=5
+	    elif (board[0] == board[4] == board[8] != 0):
+		if (numx == numo):
+		    PlayersTurn=6
+		else:
+		    PlayersTurn=5
+	    elif (board[2] == board[4] == board[6] != 0):
+		if (numx == numo):
+		    PlayersTurn=6
+		else:
+		    PlayersTurn=5
     
     if PlayersTurn < 3:
 	    for makelinks in range(0,9):  #make the board if not winner
