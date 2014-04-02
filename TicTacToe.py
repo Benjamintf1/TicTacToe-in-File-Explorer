@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os   #for making folders and links
 
 os.mkdir("Moves")
