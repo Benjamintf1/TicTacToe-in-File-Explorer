@@ -6,8 +6,11 @@ Note: Only works in Unix systems.
 WARNING: CREATES ~20k folders ~4523*9 symlinks. Plus ~15163 symlinks for 'Play_Again?' and same number of empty files. 
 ~Thanks to reddit user hxka for counting for me.
 
+
+
+
 How to start
---------------------------
+------------
 Run python TicTacToe.py
 Open up "START" in a file browser
 Resize icons/window to make a 3x3 grid
