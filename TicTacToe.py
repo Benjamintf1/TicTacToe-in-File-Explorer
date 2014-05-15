@@ -46,12 +46,12 @@ for gamestate in range(19684):
 	
 	#Screw it, I'll do 8 checks by hand checks for winning
 	if (PlayersTurn != 3):    
-	    if (board[0] == board[1] == board[2] != 0):
+		if (board[0] == board[1] == board[2] != 0):
 			if (numx == numo):
 				PlayersTurn=6
 			else:
 				PlayersTurn=5
-	    elif (board[3] == board[4] == board[5] != 0):
+		elif (board[3] == board[4] == board[5] != 0):
 			if (numx == numo):
 				PlayersTurn=6
 			else:
@@ -61,12 +61,12 @@ for gamestate in range(19684):
 				PlayersTurn=6
 			else:
 				PlayersTurn=5
-	    elif (board[0] == board[3] == board[6] != 0):
+		elif (board[0] == board[3] == board[6] != 0):
 			if (numx == numo):
 				PlayersTurn=6
 			else:
 				PlayersTurn=5
-	    elif (board[1] == board[4] == board[7] != 0):
+		elif (board[1] == board[4] == board[7] != 0):
 			if (numx == numo):
 				PlayersTurn=6
 			else:
@@ -81,12 +81,11 @@ for gamestate in range(19684):
 				PlayersTurn=6
 			else:
 				PlayersTurn=5
-	    elif (board[2] == board[4] == board[6] != 0):
+		elif (board[2] == board[4] == board[6] != 0):
 			if (numx == numo):
 				PlayersTurn=6
 			else:
 				PlayersTurn=5
-    
 	if PlayersTurn < 3:
 		for makelinks in range(0,9):  #make the board if not winner
 		filename = ""
@@ -109,17 +108,17 @@ for gamestate in range(19684):
 			filename = str(makelinks) + "O"
 			os.symlink("../Invalid_Move", filename)
 	else:
-	if (PlayersTurn == 3):  #makes end game files and a link to initial state
-		open("cheater", 'w').close()
-		os.symlink("../0", "Play_Again?")
-	elif (PlayersTurn == 4):
-		open("cats game", 'w').close()
-		os.symlink("../0", "Play_Again?")
-	elif (PlayersTurn == 5):
-		open("X wins!!", 'w').close()
-		os.symlink("../0", "Play_Again?")
-	elif (PlayersTurn == 6):
-		open("O wins!!", 'w').close()
-		os.symlink("../0", "Play_Again?")
+		if (PlayersTurn == 3):  #makes end game files and a link to initial state
+			open("cheater", 'w').close()
+			os.symlink("../0", "Play_Again?")
+		elif (PlayersTurn == 4):
+			open("cats game", 'w').close()
+			os.symlink("../0", "Play_Again?")
+		elif (PlayersTurn == 5):
+			open("X wins!!", 'w').close()
+			os.symlink("../0", "Play_Again?")
+		elif (PlayersTurn == 6):
+			open("O wins!!", 'w').close()
+			os.symlink("../0", "Play_Again?")
 	os.chdir("..") #gets ready for making next game state
 
