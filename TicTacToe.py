@@ -88,25 +88,25 @@ for gamestate in range(19684):
 				PlayersTurn=5
 	if PlayersTurn < 3:
 		for makelinks in range(0,9):  #make the board if not winner
-		filename = ""
-		if board[makelinks] == 0:
-			
-			filename = str(makelinks) + "--"
-			linknum = 0
-			
-			for x in range(0,9):
-				if x == makelinks:
-					linknum += PlayersTurn * 3**x
-				else:
-					linknum += board[x] * 3**x
-			os.symlink("../" + str(linknum), filename)
-			
-		elif board[makelinks] == 1:
-			filename = str(makelinks) + "X"
-			os.symlink("../Invalid_Move", filename)
-		else:
-			filename = str(makelinks) + "O"
-			os.symlink("../Invalid_Move", filename)
+			filename = ""
+			if board[makelinks] == 0:
+				
+				filename = str(makelinks) + "--"
+				linknum = 0
+				
+				for x in range(0,9):
+					if x == makelinks:
+						linknum += PlayersTurn * 3**x
+					else:
+						linknum += board[x] * 3**x
+				os.symlink("../" + str(linknum), filename)
+				
+			elif board[makelinks] == 1:
+				filename = str(makelinks) + "X"
+				os.symlink("../Invalid_Move", filename)
+			else:
+				filename = str(makelinks) + "O"
+				os.symlink("../Invalid_Move", filename)
 	else:
 		if (PlayersTurn == 3):  #makes end game files and a link to initial state
 			open("cheater", 'w').close()
