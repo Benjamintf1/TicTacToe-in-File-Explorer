@@ -12,7 +12,7 @@ os.mkdir("Invalid_Move") #folder for invalid moves
 open("Invalid_Move/Invalid_Move", 'w').close()
 for gamestate in range(19684):
 	if (gamestate % 703) == 0:
-		print(str(19684/703) + " / 28 done")#create gamestate's
+		print(str(gamestate/703) + " / 28 done")#create gamestate's
 	board = []                #gamestate as a list
 	os.chdir(str(gamestate))  #Get ready to make gamestate
 	for square in range(0,9):
